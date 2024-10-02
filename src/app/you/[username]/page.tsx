@@ -19,7 +19,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
-function page({ params }: { params: { username: string } }) {
+function Page({ params }: { params: { username: string } }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useForm<z.infer<typeof messageSchema>>({
     resolver: zodResolver(messageSchema),
@@ -101,4 +101,4 @@ function page({ params }: { params: { username: string } }) {
   );
 }
 
-export default page;
+export default Page;

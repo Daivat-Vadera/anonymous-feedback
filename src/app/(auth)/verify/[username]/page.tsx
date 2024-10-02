@@ -20,7 +20,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
-function page() {
+function Page() {
   const router = useRouter();
   const { toast } = useToast();
   const params = useParams();
@@ -93,4 +93,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

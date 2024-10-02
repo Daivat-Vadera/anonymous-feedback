@@ -22,7 +22,7 @@ import { signInSchema } from "@/schemas/signInSchema";
 import { signIn } from "next-auth/react";
 import { AxiosError } from "axios";
 
-function page() {
+function Page() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
   const router = useRouter();
@@ -150,4 +150,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

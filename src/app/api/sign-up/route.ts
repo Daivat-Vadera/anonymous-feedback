@@ -1,8 +1,6 @@
 import dbConnect from "@/lib/dbConnect";
 import UserModel from "@/model/User";
 import bcrypt from "bcryptjs";
-import { ApiResponse } from "@/types/ApiResponse";
-
 import sendVerificationEmail from "@/helpers/sendVerificationEmail";
 
 export async function POST(request: Request) {
@@ -40,7 +38,6 @@ export async function POST(request: Request) {
         existingUserByEmail.verifyCode = verifyCode;
         existingUserByEmail.verifyCodeExpiry = expiryDate;
         await existingUserByEmail.save();
-        
       }
     } else {
       const hashedPassword = await bcrypt.hash(password, 10);
